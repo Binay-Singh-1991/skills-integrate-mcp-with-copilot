@@ -8,8 +8,17 @@
   </head>
   <body>
     <header>
-      <h1>Mergington High School</h1>
-      <h2>Extracurricular Activities</h2>
+      <div>
+        <h1>Mergington High School</h1>
+        <h2>Extracurricular Activities</h2>
+      </div>
+      <div class="auth-panel">
+        <p id="auth-status" class="auth-status">Viewing as guest</p>
+        <div class="auth-actions">
+          <button id="login-button" type="button">Teacher Login</button>
+          <button id="logout-button" type="button" class="secondary hidden">Log Out</button>
+        </div>
+      </div>
     </header>
 
     <main>
@@ -22,8 +31,11 @@
       </section>
 
       <section id="signup-container">
-        <h3>Sign Up for an Activity</h3>
-        <form id="signup-form">
+        <h3>Manage Registrations</h3>
+        <p id="teacher-note" class="info-banner">
+          Teachers must sign in to add or remove students from activities.
+        </p>
+        <form id="signup-form" class="hidden">
           <div class="form-group">
             <label for="email">Student Email:</label>
             <input type="email" id="email" required placeholder="your-email@mergington.edu" />
@@ -40,6 +52,31 @@
         <div id="message" class="hidden"></div>
       </section>
     </main>
+
+    <div id="login-modal" class="modal hidden" aria-hidden="true">
+      <div class="modal-card">
+        <div class="modal-header">
+          <div>
+            <h3>Teacher Sign In</h3>
+            <p>Only staff and administrators can manage registrations.</p>
+          </div>
+          <button id="close-login-modal" type="button" class="icon-button" aria-label="Close sign in dialog">&times;</button>
+        </div>
+        <form id="login-form">
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required autocomplete="username" />
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" required autocomplete="current-password" />
+          </div>
+          <button type="submit">Sign In</button>
+        </form>
+        <p class="demo-credentials">Demo accounts: admin / adminpass123, coach.jones / staffpass123, student.lee / studentpass123</p>
+        <div id="auth-message" class="hidden"></div>
+      </div>
+    </div>
 
     <footer>
       <p>&copy; 2026 Mergington High School</p>

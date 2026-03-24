@@ -1,0 +1,17 @@
+[
+  {
+    "username": "admin",
+    "role": "admin",
+    "password_hash": "pbkdf2_sha256$200000$74809cb680d2aa5f8616c39d885b2224$f954b4ce4ef52aec5cb5687144e442d17bf253eadacf180bf07768bbd770268c"
+  },
+  {
+    "username": "coach.jones",
+    "role": "staff",
+    "password_hash": "pbkdf2_sha256$200000$5e6a899f05af5704b321867cb5e0b587$2ead54696b158edbf7fe3bf3ce04a406c3d69d8d143404d40a1be16bd88fb711"
+  },
+  {
+    "username": "student.lee",
+    "role": "student",
+    "password_hash": "pbkdf2_sha256$200000$394e375a6ced915d188b373eca6fb65d$c41e0725b8f08af531c268f0ec79ae3ed2cbf1562bb9d66b5a5fc41fcf261f90"
+  }
+]

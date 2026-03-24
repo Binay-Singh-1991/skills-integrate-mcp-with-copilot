@@ -16,7 +16,10 @@ body {
 }
 
 header {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
   padding: 20px 0;
   margin-bottom: 30px;
   background-color: #1a237e;
@@ -26,6 +29,22 @@ header {
 
 header h1 {
   margin-bottom: 10px;
+}
+
+.auth-panel {
+  min-width: 260px;
+  text-align: right;
+}
+
+.auth-status {
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.auth-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
 }
 
 main {
@@ -111,14 +130,14 @@ section h3 {
 }
 
 .delete-btn {
-  background: none;
-  border: none;
+  background-color: #ffe5e5;
   color: #c62828;
+  border: 1px solid #ef9a9a;
   cursor: pointer;
   font-size: 14px;
-  padding: 2px 5px;
+  padding: 6px 10px;
   transition: all 0.2s;
-  border-radius: 3px;
+  border-radius: 999px;
 }
 
 .delete-btn:hover {
@@ -164,6 +183,24 @@ button:hover {
   background-color: #3949ab;
 }
 
+.secondary {
+  background-color: white;
+  color: #1a237e;
+}
+
+.secondary:hover {
+  background-color: #e8eaf6;
+}
+
+.info-banner {
+  margin-bottom: 16px;
+  padding: 12px 14px;
+  border-radius: 4px;
+  background-color: #eef3ff;
+  color: #243b7c;
+  border: 1px solid #cdd8ff;
+}
+
 .message {
   margin-top: 20px;
   padding: 10px;
@@ -190,6 +227,68 @@ button:hover {
 
 .hidden {
   display: none;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(12, 20, 52, 0.55);
+  padding: 20px;
+}
+
+.modal-card {
+  width: 100%;
+  max-width: 460px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.modal-header p {
+  color: #666;
+}
+
+.icon-button {
+  min-width: 42px;
+  padding: 8px 12px;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.demo-credentials {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #666;
+}
+
+@media (max-width: 767px) {
+  body {
+    padding: 12px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .auth-panel {
+    text-align: left;
+  }
+
+  .auth-actions {
+    justify-content: flex-start;
+  }
 }
 
 footer {
